@@ -16,3 +16,29 @@
     font-size: vars.$font-size4;
 
 }
+
+
+
+/* Responsive */
+/*pc */
+@media (min-width: 900px) {
+.navbar-brand{
+    font-size: vars.$font-size4;;
+}
+#NavbarLabel{
+    font-size:vars.$font-size4plus;
+}
+
+.offcanvas-body{
+    ul>li{
+        .nav-link{
+            font-size: vars.$font-size4;
+        }
+    }
+}
+
+button{
+    transform: scale(1.4);
+}
+
+}

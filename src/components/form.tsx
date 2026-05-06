@@ -11,7 +11,7 @@ function Form() {
             <form target="_blank" action="https://formsubmit.co/giadachiara530@gmail.com" method = "POST">
                     <input type = "text" name = "_honey" style = {{ display: "none" }}/>
                     <div id="formBlue">
-                        <p>Do you want to have more information about VEGFOOD?</p>
+                        <p id="question">Do you want to have more information about VEGFOOD?</p>
                         <div className="row">
                             <div className = "col-md-6">
                                 <div className="row mb-3">
@@ -33,7 +33,7 @@ function Form() {
                                     </div>
                                 </div>
                                 <div className="row mb-3">
-                                    <label htmlFor="cellulare" className="col-sm-3 col-form-label">Phone:*</label>
+                                    <label htmlFor="phone" className="col-sm-3 col-form-label">Phone:*</label>
                                     <div className="col-sm-9">
                                         <input type="text" className="form-control" id="phone" name="phone" placeholder="+39 333 1234567"/>
                                     </div>

@@ -1,0 +1,61 @@
+import { useState } from "react";
+
+type Option = {
+    label: string;
+    value: string;
+};
+
+type DropdownProps = {
+    label: string;
+    id: string;
+    options: Option[];
+    onSelect: (value: string, label: string) => void;
+};
+
+
+
+export function DropDown({ label, id, options, onSelect }: DropdownProps) {
+    
+    //check selection 
+    const [selectedLabel, setSelected] = useState<string | null>(null);
+
+    //if I click get value and label, use it onSelect
+    const handleClick = (
+        e: React.MouseEvent<HTMLButtonElement>,
+        value: string,
+        label: string,
+    ) => {
+        e.preventDefault();
+        setSelected(value);
+        setSelected(label);
+        console.log("valore trovato:", value);
+        onSelect(value, label);
+    };
+
+    return (
+        <div className="dropdown" id={id}>
+        <button
+            className="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+        >
+            {selectedLabel ?? label}
+        </button>
+
+            <ul className="dropdown-menu">
+
+                {options.map((option) => (
+                <li key={option.value}>
+                    <button
+                    className="dropdown-item"
+                    onClick={(e) => handleClick(e, option.value, option.label)}
+                    >
+                    {option.label}
+                    </button>
+                </li>
+                ))}
+                
+            </ul>
+        </div>
+    );
+}
