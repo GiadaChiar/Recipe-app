@@ -18,7 +18,7 @@ export const Standardcarts = [
     nameText: "Brownie",
     timeText: "20",
     healthy: "30",
-    code: "1096185",
+    code: "633101",
   },
   {
     foodImage: "https://img.spoonacular.com/recipes/1096185-312x231.jpg",

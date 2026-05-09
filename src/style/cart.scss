@@ -30,7 +30,7 @@
 
     .imgCart{
         width: 100%;
-        height: 150px;
+        height: 170px;
         overflow: hidden;
         background: 5%;
         
@@ -163,7 +163,7 @@
 
 
 .cart.number1{
-    background-color: orange;
+    //background-color: orange;
     transform: translate3d(0,0,0) rotateZ(0deg) scale(1); z-index: 6;
     opacity: 1; 
     z-index: 99;
@@ -172,7 +172,7 @@
 
 
 .cart.number2 {
-    background-color: violet;
+    //background-color: violet;
     transform: translate3d(110px,12px,-160px) rotateZ(4deg) scale(.96); 
     z-index: 5; 
     opacity: 0.98; 
@@ -181,7 +181,7 @@
 
 
 .cart.number3 {
-    background-color: red;
+    //background-color: red;
     transform: translate3d(160px,28px,-200px) rotateZ(6deg) scale(0.92); 
     z-index: 4; 
     opacity: 0.94; 
@@ -191,7 +191,7 @@
 
 
 .cart.number4 {
-    background-color: blue;
+    //background-color: blue;
     transform: translate3d(-160px,28px,-200px) rotateZ(-6deg) scale(0.92); 
     z-index: 4; 
     opacity: 0.94; 
@@ -201,7 +201,7 @@
 
 
 .cart.number5{
-    background-color: yellow;
+    //background-color: yellow;
     transform: translate3d(-110px,10px,-160px) rotateZ(-4deg) scale(0.96); 
     z-index: 5; 
     opacity: 0.98; 

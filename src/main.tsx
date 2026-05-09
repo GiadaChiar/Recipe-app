@@ -6,11 +6,16 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import './index.css';
 import App from './App.tsx';
 
+// Redux 
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
-//ENTRY POINT 
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+//ENTRY POINTS
+//provider all the data are free in the all project 
+createRoot(document.getElementById("root")!).render(
+  <Provider store={store}>
+    <StrictMode>
+      <App />
+    </StrictMode>
+  </Provider>,
+);

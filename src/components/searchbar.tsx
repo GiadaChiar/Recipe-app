@@ -3,6 +3,9 @@
 import Label from "../components/label";
 import Input from "../components/input";
 import Button from "./button";
+import { useState } from "react";
+import { apiKey } from "../redux/store";
+import axios from "axios";
 
 
 
@@ -10,12 +13,29 @@ import Button from "./button";
 
 
 
+
 export default function SearchBar() {
 
-    const handleSendFirstBtn = () => {
-        console.log("BOTTONE 1 CLICCATO");
-        console.log("METTI LOGICA FETCH PER NOME");
-    };
+    const [getInput, setInput] = useState("");
+
+    const handleSendFirstBtn = async () => {
+        
+        console.log("INPUT Nome : ", getInput)
+        const res = await axios.get(
+            `https://api.spoonacular.com/recipes/complexSearch?diet=vegetarian&query=${getInput}&number=3&apiKey=${apiKey}`,
+        )
+        
+        const result = res.data.results;
+        
+        result.forEach((item) => {
+        const code = item.id;
+
+        console.log("il codice è:", code);
+
+        localStorage.setItem(code, JSON.stringify(item));
+    });
+};
+            
     
     return (
         <>
@@ -30,6 +50,8 @@ export default function SearchBar() {
             id="name_search"
             nameClass="form-control input"
             placeholder="Recipient's username"
+            value= {getInput}
+            onChange ={(e: React.ChangeEvent<HTMLInputElement>)=>setInput(e.target.value)}
                 />
                 
             <Button

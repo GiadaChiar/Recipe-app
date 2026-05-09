@@ -1,4 +1,4 @@
-import FakeCarts from "../components/fakecarts";
+import FakeCarts from "../components/fakeCarts";
 import { useState } from "react";
 
 

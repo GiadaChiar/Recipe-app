@@ -1,18 +1,23 @@
 //create standard input
 
 type InputProps = {
-    id : string;
-    nameClass: string;
+    nameClass?: string;
+    id: string;
     placeholder: string;
-}
+    value?: string;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+};
 
-export default function Input({ id, nameClass, placeholder }: InputProps) {
+export default function Input({ nameClass, id, placeholder, value, onChange, ...props}: InputProps) {
     return (
         <input
-            id={id}
             className={nameClass}
+            {...props}
+            id={id}
             placeholder={placeholder}
-            type="string"
+            value={value}
+            onChange={onChange}
+            {...props}
         />
-    )
+    );
 }
