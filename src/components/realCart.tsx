@@ -1,6 +1,9 @@
+//standard cart and functionalities
+
 
 import { apiKey } from "../redux/store";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -34,8 +37,10 @@ export default function RealCart({
     const fullStars = Math.floor(valueStar);
     const halfStar = valueStar % 1 >= 0.5;
     
+    const navigate = useNavigate();
 
 
+    /// CAMBIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA GIA' FATTO LE INFO CAMBIATO FETCH DI DEFAULT SOLO TROVA IL CODICE STORED E USA IU DATI REDUX
     const handleClick = () => {
         //const apiKey = "ac889ed08a0642c99d7655ba1ee3fee8";
         console.log("Cliccatooo codice ", code)
@@ -43,7 +48,8 @@ export default function RealCart({
         .get(
         `https://api.spoonacular.com/recipes/${code}/information?apiKey=${apiKey} `,
         )
-        .then((res) => console.log(res.data));
+            .then((res) => console.log(res.data));
+        navigate("/recipe");
     }
 
     return (

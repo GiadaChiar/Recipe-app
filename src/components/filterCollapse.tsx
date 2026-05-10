@@ -5,21 +5,21 @@ import Label from "./label";
 import Input from "./input";
 import Button from "./button";
 import { DropDown } from "./dropdown";
-
-
-
-
+import { useState } from "react";
 
 //section to show extra filters
 export default function FiltersCollapse() {
 
+    //get input 
+    const [getInput, setInput] = useState("");
 
     //function click fetch filters 
     const handleSerchFilters = () => {
-    console.log("CLICCATO FAI LA FETCH FILTRI");
+        console.log("CLICCATO FAI LA FETCH FILTRI");
+        console.log("input inserito:" , getInput)
     };
-
     
+
     
     return (
         <>
@@ -86,6 +86,7 @@ export default function FiltersCollapse() {
                             id="search_ingridient"
                             nameClass="form-control input"
                             placeholder="carrots"
+                            onChange ={(e: React.ChangeEvent<HTMLInputElement>)=>setInput(e.target.value)}
                         />
 
                         <Button

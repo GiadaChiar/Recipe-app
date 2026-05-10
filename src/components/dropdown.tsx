@@ -1,3 +1,5 @@
+//standard dropdown to use in the Search page
+
 import { useState } from "react";
 
 type Option = {

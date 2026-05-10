@@ -1,4 +1,7 @@
-//import style 
+// standdard form 
+
+
+
 import "../style/form.scss"
 
 

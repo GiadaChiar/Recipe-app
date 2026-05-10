@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 //style
 import "../style/menu.scss";
 
+//dynamic menu + change text in base of window screen
+
 
 function Menu() {
 
@@ -22,7 +24,7 @@ function Menu() {
 
         return () => {
             window.removeEventListener("resize", handleSize);
-        };//remove listener
+        };
 
     },[]);//only one 
 

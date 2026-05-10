@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // standard info recipes 
 const initialState = {
-    selectedRecipe: null,
+    recipes: [],
 };
 
 
@@ -12,12 +12,12 @@ const recipeSlice = createSlice({
     initialState,
     // change state
     reducers: {
-        selectedRecipe: (state, action) => {
-        state.selectedRecipe = action.payload;
+        setRecipe: (state, action) => {
+        state.recipes = action.payload;
         },
     },
 });
 
-export const { selectedRecipe } = recipeSlice.actions;
+export const { setRecipe } = recipeSlice.actions;
 
 export default recipeSlice.reducer;

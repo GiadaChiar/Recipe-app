@@ -1,4 +1,4 @@
-//create buttons for homepage and 2 for serch (send)
+//create button for homepage and 2 for serch (send)
 
 //props to pass to Button
 
