@@ -45,6 +45,8 @@ export default function FiltersCollapse() {
                 `maxCalories=${encodeURIComponent(getKcal)}&` +
                 `maxReadyTime=${encodeURIComponent(getTime)}&` +
                 `addRecipeInformation=true&` +
+                `fillIngredients=true&` +
+                `instructionsRequired=true&` +
                 `number=2&` +
                 `apiKey=${apiKey}`,
             );

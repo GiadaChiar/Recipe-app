@@ -4,6 +4,7 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { FirstBigBlock } from "./FirstPartRecipe";
+import SecondBigBlock from "../components/SecondPartRecipe"
 
 
 
@@ -22,8 +23,14 @@ export default function RecipePage() {
     if (!recipe) {
         return<p>RICETTA NON TROVATA</p>
     }
-    else if (recipe) {
-        return <FirstBigBlock recipe ={recipe}/>
-    }
+
+    return (
+        <>
+            
+                <FirstBigBlock recipe={recipe} />
+                <SecondBigBlock recipe={recipe} />
+        
+        </>
+    );
 }
 

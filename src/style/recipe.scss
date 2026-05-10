@@ -61,7 +61,7 @@
 .secondPart{
     display: flex;
     width: 100%;
-    margin-top: 100px;
+    padding-top: 150px ;
 
 
     .leftGreen{
@@ -98,6 +98,10 @@
 
     .right{
         display: block;
+        max-width:60%;
+        margin: 0px 35px 0px 35px;
+        text-align: left;
+        font-family: vars.$font1;
         h2{
             text-align: center;
             margin-bottom: 25px;
@@ -107,7 +111,6 @@
             font-weight: 600;
             color: vars.$color3;
         }
-
         ol li::marker {
             color: vars.$color3;
             font-weight: bold;
@@ -124,3 +127,5 @@
     }
 
 }
+
+

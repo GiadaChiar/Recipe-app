@@ -27,7 +27,7 @@ export default function SearchBar() {
         
         console.log("INPUT Nome : ", getInput)
         const res = await axios.get(
-            `https://api.spoonacular.com/recipes/complexSearch?diet=vegetarian&query=${getInput}&addRecipeInformation=true&number=3&apiKey=${apiKey}`,
+          `https://api.spoonacular.com/recipes/complexSearch?diet=vegetarian&query=${getInput}&addRecipeInformation=true&instructionsRequired=true&fillIngredients=true&nutrition=truenumber=3&apiKey=${apiKey}`,
         );
 
         console.log(res)
