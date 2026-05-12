@@ -1,4 +1,5 @@
-import { BrowserRouter} from "react-router-dom";
+//import { BrowserRouter} from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Menu from "./components/menu";
 import NavigationRoots from "./router/router";
 
@@ -8,10 +9,10 @@ import NavigationRoots from "./router/router";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Menu />
         <NavigationRoots/>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
