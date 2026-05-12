@@ -71,3 +71,23 @@ export default defineConfig([
   },
 ])
 ```
+## How to Use
+
+This project is deployed using **GitHub Pages** with **Vite** and **React Router**.
+
+### Install dependencies
+
+```bash
+npm install
+# to test the project :
+
+npm run dev 
+
+# to publish it 
+
+npm run build
+
+npm run deploy
+
+
+
