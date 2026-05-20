@@ -6,6 +6,8 @@ import SecondBigBlock from "../components/SecondPartRecipe"
 import { useRecipeId } from "../services/checkStates";
 import { StatusPopUp } from "../components/statusPopUp";
 
+console.log("API KEY:", import.meta.env.VITE_API_KEY);
+
 //get id recipes if is a default Cart--> get date by fetch 
 export default function RecipePage() {
 
