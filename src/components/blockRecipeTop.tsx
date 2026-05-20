@@ -8,12 +8,10 @@ type BlockRecipeProps = {
     description: string;
     value: string;
 
-        
+
 }
 
-export default function BlockRecipe({ classEl, icon, description, value }:BlockRecipeProps )
-        
-{
+export default function BlockRecipe({ classEl, icon, description, value }: BlockRecipeProps) {
 
     return (
         <>
@@ -24,5 +22,5 @@ export default function BlockRecipe({ classEl, icon, description, value }:BlockR
             </div>
         </>
     );
-    
+
 }

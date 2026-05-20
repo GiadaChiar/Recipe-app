@@ -17,14 +17,14 @@ type DropdownProps = {
 
 
 export function DropDown({ label, id, options, onSelect }: DropdownProps) {
-    
+
     //check selection 
     const [selectedLabel, setSelected] = useState<Option | null>(null);
 
     //if I click get value and label, use it onSelect
     const handleClick = (
         e: React.MouseEvent<HTMLButtonElement>,
-        option : Option 
+        option: Option
     ) => {
         e.preventDefault();
         setSelected(option);
@@ -33,27 +33,27 @@ export function DropDown({ label, id, options, onSelect }: DropdownProps) {
 
     return (
         <div className="dropdown" id={id}>
-        <button
-            className="btn btn-secondary dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-        >
-            {selectedLabel?.label ?? label}
-        </button>
+            <button
+                className="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+            >
+                {selectedLabel?.label ?? label}
+            </button>
 
             <ul className="dropdown-menu">
 
                 {options.map((option) => (
-                <li key={option.value}>
-                    <button
-                    className="dropdown-item"
-                    onClick={(e) => handleClick(e, option)}
-                    >
-                    {option.label}
-                    </button>
-                </li>
+                    <li key={option.value}>
+                        <button
+                            className="dropdown-item"
+                            onClick={(e) => handleClick(e, option)}
+                        >
+                            {option.label}
+                        </button>
+                    </li>
                 ))}
-                
+
             </ul>
         </div>
     );
@@ -61,51 +61,3 @@ export function DropDown({ label, id, options, onSelect }: DropdownProps) {
 
 
 
-
-
-/*
-
-export function DropDown({ label, id, options, onSelect }: DropdownProps) {
-    
-    //check selection 
-    const [selectedLabel, setSelected] = useState<string | null>(null);
-
-    //if I click get value and label, use it onSelect
-    const handleClick = (
-        e: React.MouseEvent<HTMLButtonElement>,
-        value: string,
-        label: string,
-    ) => {
-        e.preventDefault();
-        setSelected(value);
-        setSelected(label);
-        onSelect(value, label);
-    };
-
-    return (
-        <div className="dropdown" id={id}>
-        <button
-            className="btn btn-secondary dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-        >
-            {selectedLabel ?? label}
-        </button>
-
-            <ul className="dropdown-menu">
-
-                {options.map((option) => (
-                <li key={option.value}>
-                    <button
-                    className="dropdown-item"
-                    onClick={(e) => handleClick(e, option.value, option.label)}
-                    >
-                    {option.label}
-                    </button>
-                </li>
-                ))}
-                
-            </ul>
-        </div>
-    );
-}*/
