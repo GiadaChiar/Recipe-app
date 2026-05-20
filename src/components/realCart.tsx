@@ -1,6 +1,6 @@
 //standard cart and functionalities
 
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 type RealCartProps = {
@@ -27,20 +27,7 @@ export default function RealCart({
     //if value is decimal half Star
     const fullStars = Math.floor(valueStar);
     const halfStar = valueStar % 1 >= 0.5;
-
-    const navigate = useNavigate();
     
-    const handleClick = () => {
-        //change page and pass my card code 
-        if (code) {
-            navigate(`/recipe/${code}`);
-            return;
-        }
-        else {
-            return
-        }
-        
-    };
 
     return (
         <>
@@ -50,7 +37,7 @@ export default function RealCart({
             </div>
 
             <div className="nameCart">
-            <a onClick={handleClick}>{nameText}</a>
+            <Link className="CartTitle" to={`/recipe/${code}`}>{nameText}</Link>
             </div>
 
             <div className="timeCard">

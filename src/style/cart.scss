@@ -50,10 +50,12 @@
         }
 
     }
-    .nameCart a{
+    .nameCart  .CartTitle  {
         margin-bottom: 2px;
         font-family: vars.$font2;
         font-size: vars.$font-size5;
+        color: vars.$color2;
+        text-decoration: none;
 
         &:hover{
             text-decoration: underline;
