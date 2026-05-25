@@ -6,10 +6,7 @@ import RecipePage from "../components/getIdRecipe";
 function Recipe() {
   return (
     <>
-      <div style={{ marginTop: "100px" }}>
         <RecipePage />
-        
-      </div>
     </>
   );
 }

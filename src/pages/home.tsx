@@ -19,7 +19,7 @@ function Home() {
         <div id="home_container">
         <video autoPlay muted loop id="video-index">
             <source
-            src={`${import.meta.env.BASE_URL}video/3195650-uhd_3840_2160_25fps.mp4`}
+            src={`${import.meta.env.BASE_URL}video/video_recipe.webm`}
             type="video/mp4"
             />
             Your browser does not support the video.

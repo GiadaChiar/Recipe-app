@@ -4,6 +4,15 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
 
 
+
+const api = axios.create({
+    baseURL: "https://api.spoonacular.com",
+    params: {
+    apiKey: apiKey,
+    },
+})
+
+
 export const searchRecipes = async({
     recipeName,
     ingridient,
@@ -58,9 +67,8 @@ export const searchRecipes = async({
     params.append("fillIngredients", "true");
     params.append("instructionsRequired", "true");
     params.append("number", "5");
-    params.append("apiKey", apiKey);
-    
-    const res = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?${params.toString()}`)
+
+    const res = await api.get(`/recipes/complexSearch?${params.toString()}`)
     const results = res.data.results;
 
     return results;
@@ -70,12 +78,13 @@ export const searchRecipes = async({
 //search by id 
 export const getRecipeById = async (id: string) => {
 
-
-    const response = await axios.get(
-        `https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`
+    const response = await api.get(
+        `/recipes/${id}/information`
     );
 
     return response;
 }
+
+
 
 

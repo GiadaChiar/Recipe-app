@@ -42,7 +42,7 @@ export default function RealCart({
 
             <div className="timeCard">
             <p>{timeText} min</p>
-            <img src={`${import.meta.env.BASE_URL}images/clock.png`} alt="green clock icon" />
+            <img src={`${import.meta.env.BASE_URL}images/clock.webp`} alt="green clock icon" />
             </div>
 
             <div className="starSection">

@@ -31,14 +31,14 @@ export function FirstBigBlock({recipe}: FirstBigBlockProps) {
             <div className="square_top">
                 <BlockRecipe
                     classEl="block"
-                    icon={`${import.meta.env.BASE_URL}images/clock.png`}
+                    icon={`${import.meta.env.BASE_URL}images/clock.webp`}
                     description="Prep Time"
                     value={`${recipe.readyInMinutes} min`}
                 />
 
                 <BlockRecipe
                     classEl="block"
-                    icon={`${import.meta.env.BASE_URL}images/meat.png`}
+                    icon={`${import.meta.env.BASE_URL}images/meat.webp`}
                     description="Cuisine"
                     value={Array.isArray(recipe.cuisines)
                         ? recipe.cuisines.join(", ")
@@ -47,7 +47,7 @@ export function FirstBigBlock({recipe}: FirstBigBlockProps) {
 
                 <BlockRecipe
                     classEl="block"
-                    icon={`${import.meta.env.BASE_URL}images/fork.png`}
+                    icon={`${import.meta.env.BASE_URL}images/fork.webp`}
                     description="Servings"
                     value={recipe.servings.toString()}
                 />

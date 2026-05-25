@@ -17,7 +17,7 @@ export default function SecondBigBlock({ recipe }: SecondBigBlockProps) {
             <div className="leftGreen">
             <div className="left">
                 <h4>INGRIDIENTS:</h4>
-                <img src={`${import.meta.env.BASE_URL}images/food.png`} alt="vegetable Ingridients" />
+                <img src={`${import.meta.env.BASE_URL}images/food.webp`} alt="vegetable Ingridients" />
 
                 <ul>
                 {recipe.extendedIngredients?.map((ingridient: Ingredient) => (

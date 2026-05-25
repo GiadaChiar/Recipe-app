@@ -13,9 +13,7 @@ function Search() {
 
   return (
     <>
-      <div style={{ marginTop: "100px", marginBottom: "50px " }}>
         <h1>Are you ready to cook?</h1>
-      </div>
       <div id="green_background">
         <SearchBar />
         <FiltersCollapse />
